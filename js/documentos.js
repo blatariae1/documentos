@@ -7,5 +7,14 @@ function search()
 
 function validation(cpfValue)
 {
+    document.getElementById('busca').setAttribute("class", "ocultar");
+    document.getElementById('resultado').removeAttribute("class", "ocultar");
     document.getElementById('tituloDocumento').innerHTML = 'Certificado de: '+cpfValue;
+}
+
+function back()
+{
+    document.getElementById('busca').removeAttribute("class", "ocultar");
+    document.getElementById('resultado').setAttribute("class", "ocultar");
+    document.getElementById("inputCPF").value='';
 }

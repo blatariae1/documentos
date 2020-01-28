@@ -5,18 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="css/documentos.css">
 </head>
 <body>
+    <div id="busca"> 
+        <input type="text" placegholder="Digite o CPF" id="inputCPF">
+        <button onclick="search()"> Pesquisar </button>
+    </div> 
 
-    <input type="text" placegholder="Digite o CPF" id="inputCPF">
-    <button onclick="search()"> Pesquisar </button>
+    <div id="resultado" class="ocultar">
+        <h3 id="tituloDocumento"> </h3>
+        <button onclick="back()"> Voltar </button>
+    </div>
 
-    <h3 id="tituloDocumento"> 
-    
-        
+    <!-- FIREBASE -->
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+    <script src="js/initFirebase.js"></script>
 
-    </h3>
 
+    <!-- JAVASCRIPT -->
     <script src="js/documentos.js"></script>
     
 </body>
